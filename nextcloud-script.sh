@@ -39,15 +39,15 @@ echo ++++++++++++++++++++++++++++++++++++++++
 # echo $suuser                    # root user enter your password
 
 # sudo mysql -u root -p
-mysql -u root --execute="CREATE USER 'username1'@'localhost' IDENTIFIED BY 'password';"   # create  users for nextcloud in databases
+mysql -u root --execute="CREATE USER 'nextcloud'@'localhost' IDENTIFIED BY 'password';"   # create  users for nextcloud in databases
 mysql -u root --execute="CREATE DATABASE IF NOT EXISTS nextcloud CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;" # create databases
-mysql -u root --execute="GRANT ALL PRIVILEGES ON nextcloud.* TO 'username1'@'localhost';"  # full privileges
+mysql -u root --execute="GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'localhost';"  # full privileges
 mysql -u root --execute="FLUSH PRIVILEGES;"
 # mysql -u root --execute="quit;"                                                         # exit
 
 echo ========================================================================================================
 
-echo " Database Name :- nextcloud || Database Username :- username1  ||  Database Password :- password  "
+echo " Database Name :- nextcloud || Database Username :- nextcloud  ||  Database Password :- password  "
 
 echo ========================================================================================================
 echo "Database is " $done
